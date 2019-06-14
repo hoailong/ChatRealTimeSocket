@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: url('https://images.pexels.com/photos/531872/pexels-photo-531872.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940') 50% 50%;
+    background-size: cover;
+    height: 100vh;
+} 
+.container {
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loginBox, 
+.chatBox {
+    transition: 0.6s;
+}
+.panel {
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.2);
+}
+.loginBox {
+    text-align: center;
+    background: #fff;
+    padding: 20px 30px;
+    width: 500px;
+    position: relative;
+    margin: auto;
+    margin-bottom: 100px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+}
+#txtUsername {
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    padding: 5px;
+}
+.loginBox h1 {
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.loginBox .alert {
+    display: none;
+}
+.panel-heading .messageBox{
+    display: inline;
+}
+.chat .panel-body{
+    background: #d7dfe6;
+}
+#username {
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+#info::after{
+    content: "\2022";  
+    color: #00ff00; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 5em; 
+    /* margin-left: 0.5em;  */
+  }
+#logout {
+    cursor: pointer;
+    float: right;
+}
+.messageContent {
+    min-height: 500px;
+    max-height: 500px;
+    width: 100%;
+    border: 1px solid #1bc9e2;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px 10px;
+}
+.msg {
+    padding: 10px;
+    border-radius: 20px;
+    border-bottom: 1px solid white;
+    width: auto;
+    display: block;
+    max-width: 60%;
+}
+.mechat {
+    float: right;
+    clear: both;
+    background-color: #3578e5;
+    color: #fff;
+}
+.youchat {
+    float: left;
+    clear: both;
+    background-color: #e8e8e8;
+    color: #000;
+}
+#frmMessage {
+    width: 100%;
+    display: flex;
+}
+/* #frmMessage {
+    width: 100%;
+} */
+#txtMessage {
+    flex: 5;
+    margin-right: 2px;
+    border: 1px solid #337ab7;
+    border-radius: 5px;
+    padding: 5px; 
+}
+#btnSend {
+    flex: 1;
+}
+.onlineBox {
+    padding: 0 20px;
+}
+#users-online{
+    float: right;
+}
+.onlineBox ul {
+    list-style: none; 
+}
+.onlineBox li {
+    margin: 10px;
+}
+.onlineBox ul li::after{
+    content: "\2022";  
+    color: green; 
+    font-weight: bold; 
+    display: inline-block; 
+    width: 2em; 
+    margin-left: 1em; 
+    /* margin-left: -1em;  */
+  }
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: table;
+}

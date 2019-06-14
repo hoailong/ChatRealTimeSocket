@@ -1,0 +1,61 @@
+<div class="container">
+    
+    <div class="loginBox">
+            <h1 class="text-danger">[ ĐĂNG NHẬP ]</h1>
+            <div class="alert alert-danger">
+                <strong>Tên người dùng đã tồn tại!</strong>
+            </div>
+            <form id="frmLogin">
+                <input type="text" name="txtUsername" id="txtUsername" placeholder="Tên người dùng..." required>
+                <button id="btnLogin" class="btn btn-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
+            </form>
+    </div>
+    <div class="chatBox">
+        <div class="row">
+            <div class="chat col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                <div class="panel panel-primary">
+                      <div class="panel-heading">
+                            <h5 id="info"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Xin chào, [ <span id="username">hoailongg</span> ]
+                            <i id="logout" title="Đăng xuất" class="fa fa-sign-out" aria-hidden="true"></i></h5>
+                      </div>
+                      <div class="panel-body">
+                            <div class="messageBox">
+                                <div class="messageContent"></div>
+                                <div class="messageType">
+                                    <form id="frmMessage">
+                                        <input type="text" name="message" id="txtMessage" placeholder="Nhập tin nhắn...">
+                                        <button class="btn btn-primary" id="btnSend"><i class="fa fa-paper-plane" aria-hidden="true"></i> Gửi</button>
+                                    </form>
+                                </div>
+                            </div>
+                      </div>
+                </div>
+                
+            </div>
+            
+            <div class="online col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                            <h3 class="panel-title"><i class="fa fa-users" aria-hidden="true"></i> Online
+                            <span id="users-online"class="badge">14</span></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="onlineBox">
+                            <ul>
+                                <li>hoailongxxx</li>
+                                <li>hoailongxxx</li>
+                                <li>hoailongxxx</li>
+                                <li>hoailongxxx</li>
+                                <li>hoailongxxx</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+    </div>
+</div>
