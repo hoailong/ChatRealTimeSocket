@@ -1,4 +1,4 @@
-var socket = io();
+var socket = io('https://chat-realtime-by-hoaipv.heroku.com');
 
 $(document).ready(()=>{
     $('.loginBox').show();
@@ -13,13 +13,14 @@ $(document).ready(()=>{
     $('#frmMessage').submit((e)=> {
         e.preventDefault();
         let txtMessage = $('#txtMessage').val();
-        socket.emit('client-send-messsage', {message: txtMessage, username: $('#username').text()}); 
+        socket.emit('client-send-messsage',txtMessage); 
         $('#txtMessage').val(''); 
     });
 
     $('#logout').click(()=> {
         $('.loginBox').show();
         $('.chatBox').hide();
+        socket.emit('user-logout');
     })
     socket.on('server-send-login-success', (username)=> {
         $('.loginBox').hide();
@@ -30,13 +31,21 @@ $(document).ready(()=>{
     socket.on('server-send-login-fail', ()=> {
         $('.alert').show();
     });
+
+    socket.on('server-send-list-useronline', data => {
+        $('.list-users-online').html('');
+        $('#users-online').text(data.length);
+        data.forEach(user => {
+            $('.list-users-online').append(`<li>${user}</li>`);
+        });
+    });
     
     socket.on('server-send-new-message', (data)=> { 
          let divMessage = $('#username').text() == data.username ? 
         `<div class="msg mechat clearfix"><strong>${data.message}</div>`
          : 
          `<div class="msg youchat clearfix"><strong>${data.username}</strong>: ${data.message}</div>`
-         $('.messageContent').append(divMessage);
+        $('.messageContent').append(divMessage);
         $('.messageContent').animate({scrollTop:$(this).height()}, 'fast');
     });
 });
