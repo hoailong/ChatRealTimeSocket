@@ -1,5 +1,4 @@
-var socket = io('https://chat-realtime-by-hoaipv.heroku.com');
-
+var socket = io();
 $(document).ready(()=>{
     $('.loginBox').show();
     $('.chatBox').hide();
