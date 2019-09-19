@@ -26,6 +26,7 @@ body {
     border: 1px solid rgba(0,0,0,.2);
 }
 .loginBox {
+    margin-top: 100px;
     text-align: center;
     background: #fff;
     padding: 20px 30px;
@@ -148,7 +149,7 @@ body {
     content: '';
     display: table;
 }
-@media only screen and (max-width: 1024px){
+/* @media only screen and (max-width: 1024px){
     .chat{
         width:100%;
     }
@@ -156,4 +157,4 @@ body {
         width:100%;
     }
 
-  }
+  } */
