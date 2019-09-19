@@ -3,7 +3,7 @@
     margin: 0;
 }
 body {
-    background: url('https://images.pexels.com/photos/531872/pexels-photo-531872.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940') 50% 50%;
+    background: url('/img/bg1.jpg') 50% 50%;
     background-size: cover;
     height: 100vh;
 }
